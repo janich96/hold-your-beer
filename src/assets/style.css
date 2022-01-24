@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Press Start 2P";
+    font-size: 2.5rem;
+    -webkit-text-stroke: 2px #ffa500;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.wrapper {
+    display: grid;
+    font-family: "Comfortaa";
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 10px;
+    grid-template-rows: 100px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas: 
+    "header header"
+    "person beer";
+    grid-gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0000ff;
+    flex-shrink: 1;
+}
+
+.header__title {
+    color: #ffff00;
+    margin: auto;
+    text-align: center;
+}
+
+.header__logo {
+    width: 70px;
+}
+
+.person, .beer {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.40);
+    display: flex;
+}
+
+.text {
+    margin-bottom: 5px;
+}
+
+.key {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.person {
+    grid-area: person;
+    background-color: #b8bcc7;
+}
+
+.avatar {
+    margin-bottom: 20px;
+}
+
+.person_list li {
+    margin-left: 40px;
+}
+
+.beer {
+    grid-area: beer;
+    background-color: #ffbb6e;
+}
+
+.beer_btn {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: #b8bcc7;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.beer_btn:hover {
+    background-color: #fff;
+    border-color: #ffbb6e;
+    color: #ffbb6e;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+}
+
+.beer_btn:active {
+    background-color: #ffbb6e;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        grid-template-areas: 
+        "header"
+        "person"
+        "beer";
+        grid-template-rows: 150px auto;
+    }
+
+    .header__logo {
+        width: 100px;
+        height: 80%;
+        align-self: center;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-rows: 200px auto;
+    }
+
+    .header__logo {
+        height: 40%;
+        width: 60px;
+        align-self: center;
+    }
+}

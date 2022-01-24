@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <header class="header">
+      <img class="header__logo" alt="beer-logo" src="./assets/logo.png">
+      <h1 class="header__title">Hold your beer!</h1>
+    </header>
+    <section class="person">
+      <Person />
+    </section>
+    <section class="beer">
+      <Beer />
+    </section>
+  </div>
 </template>
 
+<style src="./assets/style.css"></style>
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Person from './components/Person.vue';
+import Beer from './components/Beer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Person,
+    Beer
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
